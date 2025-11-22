@@ -1,0 +1,86 @@
+<ion-content [fullscreen]="true" class="login-content">
+  <div class="login-container">
+    <!-- Logo Section -->
+    <div class="logo-section">
+      <div class="logo">
+        <h1>SMART<span class="highlight">FIT</span></h1>
+      </div>
+      <p class="tagline">Transforme seu corpo, transforme sua vida</p>
+    </div>
+
+    <!-- Login Form -->
+    <div class="login-form">
+      <h2>Bem-vindo de volta!</h2>
+      <p class="subtitle">Entre com suas credenciais</p>
+
+      <form (ngSubmit)="onLogin()">
+        <!-- Email Input -->
+        <div class="input-group">
+          <ion-icon name="mail-outline" class="input-icon"></ion-icon>
+          <input 
+            type="email" 
+            [(ngModel)]="email" 
+            name="email"
+            placeholder="E-mail"
+            class="custom-input"
+            required
+          />
+        </div>
+
+        <!-- Password Input -->
+        <div class="input-group">
+          <ion-icon name="lock-closed-outline" class="input-icon"></ion-icon>
+          <input 
+            [type]="showPassword ? 'text' : 'password'" 
+            [(ngModel)]="password" 
+            name="password"
+            placeholder="Senha"
+            class="custom-input"
+            required
+          />
+          <ion-icon 
+            [name]="showPassword ? 'eye-off-outline' : 'eye-outline'" 
+            class="toggle-password"
+            (click)="togglePassword()"
+          ></ion-icon>
+        </div>
+
+        <!-- Forgot Password -->
+        <div class="forgot-password">
+          <a href="#">Esqueceu sua senha?</a>
+        </div>
+
+        <!-- Login Button -->
+        <button type="submit" class="login-btn">
+          ENTRAR
+        </button>
+
+        <!-- Divider -->
+        <div class="divider">
+          <span>OU</span>
+        </div>
+
+        <!-- Social Login -->
+        <button type="button" class="social-btn google-btn">
+          <ion-icon name="logo-google"></ion-icon>
+          Continuar com Google
+        </button>
+
+        <button type="button" class="social-btn facebook-btn">
+          <ion-icon name="logo-facebook"></ion-icon>
+          Continuar com Facebook
+        </button>
+
+        <!-- Sign Up Link -->
+        <div class="signup-link">
+          <p>Não tem uma conta? <a href="#">Cadastre-se</a></p>
+        </div>
+      </form>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>© 2025 Smart Fit. Todos os direitos reservados.</p>
+    </div>
+  </div>
+</ion-content>

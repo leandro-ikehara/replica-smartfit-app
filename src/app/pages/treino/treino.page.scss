@@ -1,0 +1,81 @@
+.treino-toolbar {
+  --background: #1a1a1a;
+  --color: white;
+  --border-style: none;
+
+  ion-title {
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+}
+
+.treino-content {
+  --background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+.exercises-list {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.exercise-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.2s ease;
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.exercise-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.exercise-info {
+  flex: 1;
+
+  h3 {
+    margin: 0 0 8px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+  }
+}
+
+.sets-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 215, 0, 0.1);
+  padding: 4px 10px;
+  border-radius: 20px;
+  
+  ion-icon {
+    color: #FFD700;
+    font-size: 14px;
+  }
+
+  span {
+    color: #FFD700;
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
+
+.exercise-action {
+  padding-right: 10px;
+}

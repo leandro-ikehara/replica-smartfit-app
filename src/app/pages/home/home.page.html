@@ -1,0 +1,38 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="home-toolbar">
+    <ion-buttons slot="start">
+      <ion-menu-button color="warning"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <div class="logo-small">
+        SMART<span class="highlight">FIT</span>
+      </div>
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="warning">
+        <ion-icon slot="icon-only" name="person-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="home-content">
+  <div class="welcome-section">
+    <h2>Olá, Atleta!</h2>
+    <p>O que vamos treinar hoje?</p>
+  </div>
+
+  <div class="grid-container">
+    <div class="menu-grid">
+      <div class="menu-item" *ngFor="let item of menuItems" (click)="navigateTo(item.route)">
+        <div class="card-content" [style.backgroundImage]="'url(' + item.image + ')'">
+          <div class="overlay"></div>
+          <div class="item-info">
+            <ion-icon [name]="item.icon"></ion-icon>
+            <h3>{{ item.title }}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
