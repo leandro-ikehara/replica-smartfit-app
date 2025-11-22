@@ -35,3 +35,46 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import '@ionic/angular/css/palettes/dark.system.css';
+
+/* Mobile First Desktop View Optimization */
+@media (min-width: 768px) {
+  body {
+    background-color: #333; /* Dark background for desktop context */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+
+  app-root {
+    width: 100%;
+    max-width: 412px; /* Typical mobile width (e.g. Pixel/Samsung) */
+    height: 100vh;
+    max-height: 915px;
+    position: relative;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    background-color: var(--ion-background-color, #000);
+    border: 1px solid #444;
+  }
+  
+  ion-app {
+    height: 100%;
+  }
+
+  /* Custom Scrollbar for Desktop View */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.3);
+  }
+}

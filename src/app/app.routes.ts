@@ -18,4 +18,16 @@ export const routes: Routes = [
     redirectTo: 'login',
     pathMatch: 'full',
   },
+  {
+    path: 'aulas',
+    loadComponent: () => import('./pages/aulas/aulas.page').then( m => m.AulasPage)
+  },
+  {
+    path: 'frequencia',
+    loadComponent: () => import('./pages/frequencia/frequencia.page').then( m => m.FrequenciaPage)
+  },
+  {
+    path: 'conquistas',
+    loadComponent: () => import('./pages/conquistas/conquistas.page').then( m => m.ConquistasPage)
+  },
 ];

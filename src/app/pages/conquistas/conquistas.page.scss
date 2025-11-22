@@ -1,0 +1,64 @@
+.achievement-card {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  &.locked {
+    opacity: 0.7;
+    background-color: #f4f4f4;
+    
+    .achievement-title, .achievement-desc {
+      color: var(--ion-color-medium);
+    }
+  }
+}
+
+.icon-container {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+  
+  ion-icon {
+    font-size: 32px;
+  }
+}
+
+.achievement-title {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin: 5px 0;
+  color: var(--ion-color-dark);
+}
+
+.achievement-desc {
+  font-size: 0.75rem;
+  color: var(--ion-color-medium);
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.progress-section {
+  margin-top: auto;
+  
+  ion-progress-bar {
+    height: 6px;
+    border-radius: 3px;
+    margin-bottom: 4px;
+  }
+  
+  small {
+    font-size: 0.7rem;
+    color: var(--ion-color-medium);
+  }
+}
+
+.unlocked-badge {
+  margin-top: auto;
+  font-size: 0.7rem;
+}

@@ -46,8 +46,4 @@ export class TreinoPage implements OnInit {
   ngOnInit() {
   }
 
-  goBack() {
-    this.router.navigate(['/home']);
-  }
-
 }

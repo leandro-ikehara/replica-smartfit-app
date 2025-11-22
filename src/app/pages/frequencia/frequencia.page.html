@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Frequência</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Frequência</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Frequência Semanal</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <canvas #barCanvas></canvas>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Progresso Mensal</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p class="ion-margin-bottom">Você treinou {{ frequenciaMensal }} dias este mês!</p>
+      <ion-progress-bar [value]="progresso" color="warning"></ion-progress-bar>
+      <div class="ion-text-end ion-margin-top">
+        <small>Meta: {{ metaMensal }} dias</small>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

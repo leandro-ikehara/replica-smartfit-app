@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Aulas do Dia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Aulas</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="ion-padding-start ion-padding-top">
+    <h3>Hoje, {{ currentDate | date:'dd/MM' }}</h3>
+  </div>
+
+  <ion-list>
+    <ion-item *ngFor="let aula of aulas">
+      <ion-label>
+        <h2>{{ aula.name }}</h2>
+        <p>Duração: {{ aula.duration }}</p>
+      </ion-label>
+      <ion-note slot="end" color="primary" style="font-weight: bold; font-size: 1.1em;">{{ aula.time }}</ion-note>
+    </ion-item>
+  </ion-list>
+</ion-content>

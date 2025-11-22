@@ -1,9 +1,7 @@
-<ion-header class="ion-no-border">
-  <ion-toolbar class="treino-toolbar">
+<ion-header [translucent]="true">
+  <ion-toolbar color="warning">
     <ion-buttons slot="start">
-      <ion-button (click)="goBack()" color="warning">
-        <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
-      </ion-button>
+      <ion-back-button defaultHref="/home"></ion-back-button>
     </ion-buttons>
     <ion-title>Treino A</ion-title>
   </ion-toolbar>
